@@ -11,6 +11,8 @@ const tools = [
   { name: 'JSON格式化', desc: 'JSON格式化、压缩、校验工具', href: '/json-formatter', icon: '🔧', tag: 'NEW' },
   { name: 'Base64编解码', desc: '在线Base64编码/解码，支持中文', href: '/base64', icon: '🔐', tag: 'NEW' },
   { name: '时间戳转换', desc: 'Unix时间戳与日期互转', href: '/timestamp', icon: '⏰', tag: 'NEW' },
+  { name: '密码生成器', desc: '生成安全随机密码', href: '/password-gen', icon: '🔑', tag: 'NEW' },
+  { name: '颜色转换器', desc: 'HEX/RGB/HSL颜色互转', href: '/color-converter', icon: '🎨', tag: 'NEW' },
 ]
 
 export default function Home() {
