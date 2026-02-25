@@ -3,7 +3,7 @@ import { Locale } from './config'
 type Translations = {
   hero: { badge: string; title: string; subtitle: string; desc: string; cta: string; blog: string }
   stats: { tools: string; cost: string; register: string; available: string }
-  categories: { ai: { name: string; desc: string }; dev: { name: string; desc: string }; text: { name: string; desc: string }; design: { name: string; desc: string } }
+  categories: { ai: { name: string; desc: string }; dev: { name: string; desc: string }; text: { name: string; desc: string }; design: { name: string; desc: string }; pdf: { name: string; desc: string } }
   tools: Record<string, { name: string; desc: string }>
   footer: { desc: string; popular: string; resources: string; rights: string; blog: string }
   cta: { title: string; desc: string; btn: string }
@@ -13,7 +13,7 @@ type Translations = {
 const zh: Translations = {
   hero: { badge: '已上线 16+ 个免费工具，持续更新中', title: 'AI Tools', subtitle: '免费在线工具集 · 无需注册 · 即用即走', desc: 'AI驱动的智能写作工具 + 程序员必备开发工具 + 实用文本处理，一站式解决你的效率需求', cta: '开始使用', blog: '📚 阅读博客' },
   stats: { tools: '在线工具', cost: '使用费用', register: '需要注册', available: '随时可用' },
-  categories: { ai: { name: 'AI 智能写作', desc: '让AI帮你搞定各种文案和文书' }, dev: { name: '开发者工具箱', desc: '程序员日常必备效率工具' }, text: { name: '文本处理', desc: '高效处理各种文本需求' }, design: { name: '设计工具', desc: 'CSS可视化生成器' } },
+  categories: { ai: { name: 'AI 智能写作', desc: '让AI帮你搞定各种文案和文书' }, dev: { name: '开发者工具箱', desc: '程序员日常必备效率工具' }, text: { name: '文本处理', desc: '高效处理各种文本需求' }, design: { name: '设计工具', desc: 'CSS可视化生成器' }, pdf: { name: 'PDF工具', desc: 'PDF合并、压缩、转换' } },
   tools: {
     copywriter: { name: 'AI文案生成器', desc: '小红书/淘宝/抖音爆款文案一键生成' },
     'weekly-report': { name: 'AI周报生成器', desc: '5分钟搞定专业周报' },
@@ -53,6 +53,9 @@ const zh: Translations = {
     'meta-tag': { name: 'Meta标签生成器', desc: '生成SEO友好的HTML meta标签' },
     'border-radius': { name: 'Border Radius生成器', desc: '可视化生成CSS圆角效果' },
     'md-to-html': { name: 'Markdown转HTML', desc: 'Markdown文本转HTML代码' },
+    'pdf-merge': { name: 'PDF合并', desc: '多个PDF文件合并为一个' },
+    'pdf-compress': { name: 'PDF压缩', desc: '在线压缩PDF减小体积' },
+    'image-to-pdf': { name: '图片转PDF', desc: '多张图片合并为PDF文件' },
   },
   footer: { desc: '免费在线工具平台，AI驱动的智能写作 + 开发者工具 + 文本处理，无需注册即用即走。', popular: '热门工具', resources: '资源', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 博客' },
   cta: { title: '更多工具持续上线中', desc: '我们每周都在开发新工具，收藏本站，随时回来探索', btn: '浏览全部工具' },
@@ -62,7 +65,7 @@ const zh: Translations = {
 const en: Translations = {
   hero: { badge: '16+ free tools online, updated weekly', title: 'AI Tools', subtitle: 'Free Online Toolkit · No Sign-up · Use Instantly', desc: 'AI-powered writing tools + developer utilities + text processing — your one-stop productivity solution', cta: 'Get Started', blog: '📚 Read Blog' },
   stats: { tools: 'Online Tools', cost: 'Usage Fee', register: 'Sign-up Required', available: 'Available' },
-  categories: { ai: { name: 'AI Writing', desc: 'Let AI handle your copywriting and documents' }, dev: { name: 'Developer Tools', desc: 'Essential daily tools for programmers' }, text: { name: 'Text Processing', desc: 'Efficiently handle all text needs' }, design: { name: 'Design Tools', desc: 'Visual CSS generators' } },
+  categories: { ai: { name: 'AI Writing', desc: 'Let AI handle your copywriting and documents' }, dev: { name: 'Developer Tools', desc: 'Essential daily tools for programmers' }, text: { name: 'Text Processing', desc: 'Efficiently handle all text needs' }, design: { name: 'Design Tools', desc: 'Visual CSS generators' }, pdf: { name: 'PDF Tools', desc: 'Merge, compress, convert PDFs' } },
   tools: {
     copywriter: { name: 'AI Copywriter', desc: 'Generate viral social media copy in one click' },
     'weekly-report': { name: 'Weekly Report Generator', desc: 'Professional weekly reports in 5 minutes' },
@@ -102,6 +105,9 @@ const en: Translations = {
     'meta-tag': { name: 'Meta Tag Generator', desc: 'Generate SEO-friendly meta tags' },
     'border-radius': { name: 'Border Radius Generator', desc: 'Generate CSS border-radius visually' },
     'md-to-html': { name: 'Markdown to HTML', desc: 'Convert Markdown to HTML code' },
+    'pdf-merge': { name: 'PDF Merge', desc: 'Merge multiple PDFs into one' },
+    'pdf-compress': { name: 'PDF Compress', desc: 'Compress PDF files online' },
+    'image-to-pdf': { name: 'Image to PDF', desc: 'Combine images into a PDF' },
   },
   footer: { desc: 'Free online tool platform with AI-powered writing, developer tools, and text processing. No sign-up required.', popular: 'Popular Tools', resources: 'Resources', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 Blog' },
   cta: { title: 'More tools coming every week', desc: 'Bookmark this site and come back to explore new tools', btn: 'Browse All Tools' },
@@ -111,7 +117,7 @@ const en: Translations = {
 const ja: Translations = {
   hero: { badge: '16以上の無料ツールを公開中、毎週更新', title: 'AI Tools', subtitle: '無料オンラインツール · 登録不要 · すぐ使える', desc: 'AI搭載のライティングツール + 開発者ツール + テキスト処理 — 生産性を一括解決', cta: '使ってみる', blog: '📚 ブログ' },
   stats: { tools: 'ツール数', cost: '利用料金', register: '登録必要', available: 'いつでも利用可' },
-  categories: { ai: { name: 'AIライティング', desc: 'AIがコピーライティングをサポート' }, dev: { name: '開発者ツール', desc: 'プログラマー必須の効率ツール' }, text: { name: 'テキスト処理', desc: 'テキスト処理を効率的に' }, design: { name: 'デザインツール', desc: 'CSS視覚ジェネレーター' } },
+  categories: { ai: { name: 'AIライティング', desc: 'AIがコピーライティングをサポート' }, dev: { name: '開発者ツール', desc: 'プログラマー必須の効率ツール' }, text: { name: 'テキスト処理', desc: 'テキスト処理を効率的に' }, design: { name: 'デザインツール', desc: 'CSS視覚ジェネレーター' }, pdf: { name: 'PDFツール', desc: 'PDF結合・圧縮・変換' } },
   tools: {
     copywriter: { name: 'AIコピーライター', desc: 'SNS向けバズるコピーをワンクリック生成' },
     'weekly-report': { name: '週報ジェネレーター', desc: '5分でプロの週報を作成' },
@@ -151,6 +157,9 @@ const ja: Translations = {
     'meta-tag': { name: 'Metaタグ生成', desc: 'SEO用メタタグを生成' },
     'border-radius': { name: 'Border Radius生成', desc: 'CSS角丸を視覚的に生成' },
     'md-to-html': { name: 'Markdown→HTML', desc: 'MarkdownをHTMLに変換' },
+    'pdf-merge': { name: 'PDF結合', desc: '複数のPDFを1つに結合' },
+    'pdf-compress': { name: 'PDF圧縮', desc: 'PDFファイルをオンライン圧縮' },
+    'image-to-pdf': { name: '画像→PDF', desc: '画像をPDFに変換' },
   },
   footer: { desc: '無料オンラインツールプラットフォーム。AI搭載ライティング、開発者ツール、テキスト処理。登録不要。', popular: '人気ツール', resources: 'リソース', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 ブログ' },
   cta: { title: '毎週新しいツールを追加中', desc: 'ブックマークして、新しいツールを探しに来てください', btn: 'すべてのツールを見る' },
@@ -160,7 +169,7 @@ const ja: Translations = {
 const ko: Translations = {
   hero: { badge: '16개 이상의 무료 도구 제공, 매주 업데이트', title: 'AI Tools', subtitle: '무료 온라인 도구 · 가입 불필요 · 바로 사용', desc: 'AI 기반 글쓰기 도구 + 개발자 도구 + 텍스트 처리 — 올인원 생산성 솔루션', cta: '시작하기', blog: '📚 블로그' },
   stats: { tools: '온라인 도구', cost: '이용 요금', register: '가입 필요', available: '항상 이용 가능' },
-  categories: { ai: { name: 'AI 글쓰기', desc: 'AI가 카피라이팅을 도와드립니다' }, dev: { name: '개발자 도구', desc: '프로그래머 필수 효율 도구' }, text: { name: '텍스트 처리', desc: '텍스트 처리를 효율적으로' }, design: { name: '디자인 도구', desc: 'CSS 시각적 생성기' } },
+  categories: { ai: { name: 'AI 글쓰기', desc: 'AI가 카피라이팅을 도와드립니다' }, dev: { name: '개발자 도구', desc: '프로그래머 필수 효율 도구' }, text: { name: '텍스트 처리', desc: '텍스트 처리를 효율적으로' }, design: { name: '디자인 도구', desc: 'CSS 시각적 생성기' }, pdf: { name: 'PDF 도구', desc: 'PDF 병합, 압축, 변환' } },
   tools: {
     copywriter: { name: 'AI 카피라이터', desc: '바이럴 SNS 카피를 원클릭 생성' },
     'weekly-report': { name: '주간보고서 생성기', desc: '5분 만에 전문 주간보고서 작성' },
@@ -200,6 +209,9 @@ const ko: Translations = {
     'meta-tag': { name: 'Meta 태그 생성기', desc: 'SEO 메타 태그 생성' },
     'border-radius': { name: 'Border Radius 생성기', desc: 'CSS 둥근 모서리 생성' },
     'md-to-html': { name: 'Markdown→HTML', desc: 'Markdown을 HTML로 변환' },
+    'pdf-merge': { name: 'PDF 병합', desc: '여러 PDF를 하나로 병합' },
+    'pdf-compress': { name: 'PDF 압축', desc: 'PDF 파일 온라인 압축' },
+    'image-to-pdf': { name: '이미지→PDF', desc: '이미지를 PDF로 변환' },
   },
   footer: { desc: '무료 온라인 도구 플랫폼. AI 기반 글쓰기, 개발자 도구, 텍스트 처리. 가입 불필요.', popular: '인기 도구', resources: '리소스', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 블로그' },
   cta: { title: '매주 새로운 도구 추가 중', desc: '북마크하고 새로운 도구를 탐색하세요', btn: '모든 도구 보기' },
@@ -209,7 +221,7 @@ const ko: Translations = {
 const es: Translations = {
   hero: { badge: '16+ herramientas gratuitas, actualizadas semanalmente', title: 'AI Tools', subtitle: 'Herramientas Online Gratis · Sin Registro · Uso Inmediato', desc: 'Herramientas de escritura con IA + utilidades para desarrolladores + procesamiento de texto — tu solución integral', cta: 'Comenzar', blog: '📚 Blog' },
   stats: { tools: 'Herramientas', cost: 'Costo', register: 'Registro', available: 'Disponible' },
-  categories: { ai: { name: 'Escritura IA', desc: 'Deja que la IA maneje tu redacción' }, dev: { name: 'Herramientas Dev', desc: 'Utilidades esenciales para programadores' }, text: { name: 'Texto', desc: 'Procesamiento eficiente de texto' }, design: { name: 'Diseño', desc: 'Generadores CSS visuales' } },
+  categories: { ai: { name: 'Escritura IA', desc: 'Deja que la IA maneje tu redacción' }, dev: { name: 'Herramientas Dev', desc: 'Utilidades esenciales para programadores' }, text: { name: 'Texto', desc: 'Procesamiento eficiente de texto' }, design: { name: 'Diseño', desc: 'Generadores CSS visuales' }, pdf: { name: 'PDF', desc: 'Fusionar, comprimir, convertir PDFs' } },
   tools: {
     copywriter: { name: 'Copywriter IA', desc: 'Genera textos virales con un clic' },
     'weekly-report': { name: 'Informe Semanal', desc: 'Informes profesionales en 5 minutos' },
@@ -249,6 +261,9 @@ const es: Translations = {
     'meta-tag': { name: 'Generador Meta Tags', desc: 'Generar meta tags SEO' },
     'border-radius': { name: 'Generador Border Radius', desc: 'Generar CSS border-radius' },
     'md-to-html': { name: 'Markdown a HTML', desc: 'Convertir Markdown a HTML' },
+    'pdf-merge': { name: 'Fusionar PDF', desc: 'Fusionar múltiples PDFs' },
+    'pdf-compress': { name: 'Comprimir PDF', desc: 'Comprimir archivos PDF' },
+    'image-to-pdf': { name: 'Imagen a PDF', desc: 'Combinar imágenes en PDF' },
   },
   footer: { desc: 'Plataforma de herramientas online gratuitas con escritura IA, herramientas de desarrollo y procesamiento de texto.', popular: 'Herramientas Populares', resources: 'Recursos', rights: '© 2026 AI Tools · Todos los derechos reservados', blog: '📚 Blog' },
   cta: { title: 'Nuevas herramientas cada semana', desc: 'Guarda este sitio y vuelve a explorar nuevas herramientas', btn: 'Ver Todas las Herramientas' },

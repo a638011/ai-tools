@@ -7,6 +7,7 @@ const toolSlugs = {
   dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html'],
   text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress'],
   design: ['gradient', 'box-shadow', 'border-radius'],
+  pdf: ['pdf-merge', 'pdf-compress', 'image-to-pdf'],
 }
 const toolIcons: Record<string, string> = {
   copywriter: '✍️', 'weekly-report': '📊', resume: '📄', 'name-gen': '✨',
@@ -19,6 +20,7 @@ const toolIcons: Record<string, string> = {
   'ip-lookup': '🌐', emoji: '😀', 'image-compress': '🗜️', 'text-case': '🔠',
   'jwt-decoder': '🔐', 'json-csv': '📊', gradient: '🎨', 'box-shadow': '🔲', 'meta-tag': '🏷️',
   'border-radius': '⬜', 'md-to-html': '📝',
+  'pdf-merge': '🔗', 'pdf-compress': '🗜️', 'image-to-pdf': '🖼️',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
 const catConfig = [
@@ -26,6 +28,7 @@ const catConfig = [
   { key: 'dev' as const, icon: '🛠️', gradient: 'from-blue-500 to-cyan-500' },
   { key: 'text' as const, icon: '📝', gradient: 'from-emerald-500 to-teal-500' },
   { key: 'design' as const, icon: '🎨', gradient: 'from-pink-500 to-rose-500' },
+  { key: 'pdf' as const, icon: '📄', gradient: 'from-red-500 to-orange-500' },
 ]
 
 export default function HomePage() {

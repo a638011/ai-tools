@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'cron-parser', 'ip-lookup', 'emoji', 'image-compress', 'text-case',
     'jwt-decoder', 'json-csv', 'gradient', 'box-shadow', 'meta-tag',
     'border-radius', 'md-to-html',
+    'pdf-merge', 'pdf-compress', 'image-to-pdf',
   ]
 
   const blogs = [
