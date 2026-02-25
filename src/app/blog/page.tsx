@@ -63,6 +63,20 @@ const posts = [
     date: '2026-02-25',
     tag: '安全指南',
   },
+  {
+    slug: 'json-formatter-guide',
+    title: '在线JSON格式化工具使用指南：格式化、压缩、校验',
+    desc: '详细介绍JSON格式化工具的使用方法，包括常见JSON错误排查，程序员必备技能。',
+    date: '2026-02-25',
+    tag: '开发工具',
+  },
+  {
+    slug: 'qrcode-generator-guide',
+    title: '二维码生成器使用指南：如何免费生成QR Code',
+    desc: '免费在线二维码生成器教程，支持网址、文本、WiFi信息，自定义尺寸，一键下载。',
+    date: '2026-02-25',
+    tag: '实用工具',
+  },
 ]
 
 export default function BlogPage() {
