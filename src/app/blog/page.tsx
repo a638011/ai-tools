@@ -147,6 +147,20 @@ const posts = [
     date: '2026-02-25',
     tag: '开发知识',
   },
+  {
+    slug: 'markdown-cheatsheet',
+    title: 'Markdown语法速查表：5分钟掌握Markdown写作',
+    desc: '最全Markdown语法速查表，涵盖标题、列表、链接、代码块、表格等常用语法。',
+    date: '2026-02-26',
+    tag: '效率工具',
+  },
+  {
+    slug: 'css-color-formats',
+    title: 'CSS颜色格式详解：HEX、RGB、HSL怎么选？',
+    desc: '详解CSS颜色格式的区别、转换方法和使用场景。',
+    date: '2026-02-26',
+    tag: '前端开发',
+  },
 ]
 
 export default function BlogPage() {
