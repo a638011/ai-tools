@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'hash-algorithm-guide', 'jwt-token-guide',
     'markdown-cheatsheet', 'css-color-formats',
     'pdf-tools-guide', 'css-box-shadow-guide',
+    'developer-tools-collection-2026', 'url-encoding-guide',
   ]
 
   const entries: MetadataRoute.Sitemap = []

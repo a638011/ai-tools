@@ -175,6 +175,20 @@ const posts = [
     date: '2026-02-26',
     tag: '前端开发',
   },
+  {
+    slug: 'developer-tools-collection-2026',
+    title: '2026年程序员必备在线工具合集：40+免费开发者工具',
+    desc: '精选40+免费在线开发者工具，涵盖JSON、Base64、正则、PDF等，程序员必备。',
+    date: '2026-02-26',
+    tag: '工具合集',
+  },
+  {
+    slug: 'url-encoding-guide',
+    title: 'URL编码是什么？为什么链接里有%20？',
+    desc: '详解URL编码原理、为什么需要编码、常见编码字符对照表。',
+    date: '2026-02-26',
+    tag: '开发知识',
+  },
 ]
 
 export default function BlogPage() {
