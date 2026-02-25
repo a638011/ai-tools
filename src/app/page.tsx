@@ -13,6 +13,8 @@ const tools = [
   { name: '时间戳转换', desc: 'Unix时间戳与日期互转', href: '/timestamp', icon: '⏰', tag: 'NEW' },
   { name: '密码生成器', desc: '生成安全随机密码', href: '/password-gen', icon: '🔑', tag: 'NEW' },
   { name: '颜色转换器', desc: 'HEX/RGB/HSL颜色互转', href: '/color-converter', icon: '🎨', tag: 'NEW' },
+  { name: 'Markdown预览', desc: '实时编辑预览Markdown', href: '/markdown', icon: '📝', tag: 'NEW' },
+  { name: '正则表达式测试', desc: '在线测试正则，实时匹配高亮', href: '/regex', icon: '🔍', tag: 'NEW' },
 ]
 
 export default function Home() {
