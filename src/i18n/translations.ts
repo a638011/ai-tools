@@ -1,0 +1,154 @@
+import { Locale } from './config'
+
+type Translations = {
+  hero: { badge: string; title: string; subtitle: string; desc: string; cta: string; blog: string }
+  stats: { tools: string; cost: string; register: string; available: string }
+  categories: { ai: { name: string; desc: string }; dev: { name: string; desc: string }; text: { name: string; desc: string } }
+  tools: Record<string, { name: string; desc: string }>
+  footer: { desc: string; popular: string; resources: string; rights: string; blog: string }
+  cta: { title: string; desc: string; btn: string }
+  common: { hot: string; back: string }
+}
+
+const zh: Translations = {
+  hero: { badge: '已上线 16+ 个免费工具，持续更新中', title: 'AI Tools', subtitle: '免费在线工具集 · 无需注册 · 即用即走', desc: 'AI驱动的智能写作工具 + 程序员必备开发工具 + 实用文本处理，一站式解决你的效率需求', cta: '开始使用', blog: '📚 阅读博客' },
+  stats: { tools: '在线工具', cost: '使用费用', register: '需要注册', available: '随时可用' },
+  categories: { ai: { name: 'AI 智能写作', desc: '让AI帮你搞定各种文案和文书' }, dev: { name: '开发者工具箱', desc: '程序员日常必备效率工具' }, text: { name: '文本处理', desc: '高效处理各种文本需求' } },
+  tools: {
+    copywriter: { name: 'AI文案生成器', desc: '小红书/淘宝/抖音爆款文案一键生成' },
+    'weekly-report': { name: 'AI周报生成器', desc: '5分钟搞定专业周报' },
+    resume: { name: 'AI简历生成器', desc: '3种风格，一键生成专业简历' },
+    'name-gen': { name: 'AI起名生成器', desc: '宝宝/品牌/公司智能起名' },
+    moments: { name: 'AI朋友圈文案', desc: '高级感文案，告别词穷' },
+    email: { name: 'AI邮件助手', desc: '商务/求职邮件快速生成' },
+    'json-formatter': { name: 'JSON格式化', desc: '格式化、压缩、校验一站搞定' },
+    base64: { name: 'Base64编解码', desc: '支持中文的Base64转换' },
+    timestamp: { name: '时间戳转换', desc: 'Unix时间戳与日期互转' },
+    regex: { name: '正则表达式测试', desc: '实时匹配高亮，内置常用正则' },
+    'url-encode': { name: 'URL编解码', desc: 'URL编码/解码在线工具' },
+    'color-converter': { name: '颜色转换器', desc: 'HEX/RGB/HSL一键互转' },
+    'word-count': { name: '在线字数统计', desc: '中英文字数、字符数实时统计' },
+    markdown: { name: 'Markdown预览', desc: '左右分栏实时预览' },
+    'text-diff': { name: '文本对比', desc: '逐行对比，差异高亮显示' },
+    'password-gen': { name: '密码生成器', desc: '安全随机密码，强度可调' },
+  },
+  footer: { desc: '免费在线工具平台，AI驱动的智能写作 + 开发者工具 + 文本处理，无需注册即用即走。', popular: '热门工具', resources: '资源', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 博客' },
+  cta: { title: '更多工具持续上线中', desc: '我们每周都在开发新工具，收藏本站，随时回来探索', btn: '浏览全部工具' },
+  common: { hot: '🔥 热门', back: '← 返回工具集' },
+}
+
+const en: Translations = {
+  hero: { badge: '16+ free tools online, updated weekly', title: 'AI Tools', subtitle: 'Free Online Toolkit · No Sign-up · Use Instantly', desc: 'AI-powered writing tools + developer utilities + text processing — your one-stop productivity solution', cta: 'Get Started', blog: '📚 Read Blog' },
+  stats: { tools: 'Online Tools', cost: 'Usage Fee', register: 'Sign-up Required', available: 'Available' },
+  categories: { ai: { name: 'AI Writing', desc: 'Let AI handle your copywriting and documents' }, dev: { name: 'Developer Tools', desc: 'Essential daily tools for programmers' }, text: { name: 'Text Processing', desc: 'Efficiently handle all text needs' } },
+  tools: {
+    copywriter: { name: 'AI Copywriter', desc: 'Generate viral social media copy in one click' },
+    'weekly-report': { name: 'Weekly Report Generator', desc: 'Professional weekly reports in 5 minutes' },
+    resume: { name: 'Resume Builder', desc: '3 styles, generate professional resumes instantly' },
+    'name-gen': { name: 'Name Generator', desc: 'Smart naming for babies, brands & companies' },
+    moments: { name: 'Social Media Captions', desc: 'Premium captions, never lost for words' },
+    email: { name: 'Email Assistant', desc: 'Business & job application emails in seconds' },
+    'json-formatter': { name: 'JSON Formatter', desc: 'Format, minify & validate in one place' },
+    base64: { name: 'Base64 Encoder', desc: 'Base64 encoding/decoding with Unicode support' },
+    timestamp: { name: 'Timestamp Converter', desc: 'Unix timestamp & date conversion' },
+    regex: { name: 'Regex Tester', desc: 'Real-time matching with built-in patterns' },
+    'url-encode': { name: 'URL Encoder', desc: 'Online URL encoding/decoding tool' },
+    'color-converter': { name: 'Color Converter', desc: 'HEX/RGB/HSL instant conversion' },
+    'word-count': { name: 'Word Counter', desc: 'Real-time character & word count' },
+    markdown: { name: 'Markdown Preview', desc: 'Side-by-side live preview' },
+    'text-diff': { name: 'Text Diff', desc: 'Line-by-line comparison with highlights' },
+    'password-gen': { name: 'Password Generator', desc: 'Secure random passwords, adjustable strength' },
+  },
+  footer: { desc: 'Free online tool platform with AI-powered writing, developer tools, and text processing. No sign-up required.', popular: 'Popular Tools', resources: 'Resources', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 Blog' },
+  cta: { title: 'More tools coming every week', desc: 'Bookmark this site and come back to explore new tools', btn: 'Browse All Tools' },
+  common: { hot: '🔥 Hot', back: '← Back to Tools' },
+}
+
+const ja: Translations = {
+  hero: { badge: '16以上の無料ツールを公開中、毎週更新', title: 'AI Tools', subtitle: '無料オンラインツール · 登録不要 · すぐ使える', desc: 'AI搭載のライティングツール + 開発者ツール + テキスト処理 — 生産性を一括解決', cta: '使ってみる', blog: '📚 ブログ' },
+  stats: { tools: 'ツール数', cost: '利用料金', register: '登録必要', available: 'いつでも利用可' },
+  categories: { ai: { name: 'AIライティング', desc: 'AIがコピーライティングをサポート' }, dev: { name: '開発者ツール', desc: 'プログラマー必須の効率ツール' }, text: { name: 'テキスト処理', desc: 'テキスト処理を効率的に' } },
+  tools: {
+    copywriter: { name: 'AIコピーライター', desc: 'SNS向けバズるコピーをワンクリック生成' },
+    'weekly-report': { name: '週報ジェネレーター', desc: '5分でプロの週報を作成' },
+    resume: { name: '履歴書ビルダー', desc: '3つのスタイルで即座に作成' },
+    'name-gen': { name: '名前ジェネレーター', desc: '赤ちゃん・ブランド・会社名を提案' },
+    moments: { name: 'SNSキャプション', desc: 'おしゃれなキャプションを生成' },
+    email: { name: 'メールアシスタント', desc: 'ビジネスメールを素早く作成' },
+    'json-formatter': { name: 'JSONフォーマッター', desc: '整形・圧縮・検証をワンストップで' },
+    base64: { name: 'Base64変換', desc: 'Unicode対応のBase64エンコード' },
+    timestamp: { name: 'タイムスタンプ変換', desc: 'Unixタイムスタンプと日付の変換' },
+    regex: { name: '正規表現テスター', desc: 'リアルタイムマッチングとハイライト' },
+    'url-encode': { name: 'URLエンコード', desc: 'URLエンコード/デコードツール' },
+    'color-converter': { name: 'カラー変換', desc: 'HEX/RGB/HSL即時変換' },
+    'word-count': { name: '文字数カウント', desc: 'リアルタイム文字数・単語数カウント' },
+    markdown: { name: 'Markdownプレビュー', desc: '左右分割リアルタイムプレビュー' },
+    'text-diff': { name: 'テキスト比較', desc: '行ごとの比較とハイライト表示' },
+    'password-gen': { name: 'パスワード生成', desc: '安全なランダムパスワード生成' },
+  },
+  footer: { desc: '無料オンラインツールプラットフォーム。AI搭載ライティング、開発者ツール、テキスト処理。登録不要。', popular: '人気ツール', resources: 'リソース', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 ブログ' },
+  cta: { title: '毎週新しいツールを追加中', desc: 'ブックマークして、新しいツールを探しに来てください', btn: 'すべてのツールを見る' },
+  common: { hot: '🔥 人気', back: '← ツール一覧に戻る' },
+}
+
+const ko: Translations = {
+  hero: { badge: '16개 이상의 무료 도구 제공, 매주 업데이트', title: 'AI Tools', subtitle: '무료 온라인 도구 · 가입 불필요 · 바로 사용', desc: 'AI 기반 글쓰기 도구 + 개발자 도구 + 텍스트 처리 — 올인원 생산성 솔루션', cta: '시작하기', blog: '📚 블로그' },
+  stats: { tools: '온라인 도구', cost: '이용 요금', register: '가입 필요', available: '항상 이용 가능' },
+  categories: { ai: { name: 'AI 글쓰기', desc: 'AI가 카피라이팅을 도와드립니다' }, dev: { name: '개발자 도구', desc: '프로그래머 필수 효율 도구' }, text: { name: '텍스트 처리', desc: '텍스트 처리를 효율적으로' } },
+  tools: {
+    copywriter: { name: 'AI 카피라이터', desc: '바이럴 SNS 카피를 원클릭 생성' },
+    'weekly-report': { name: '주간보고서 생성기', desc: '5분 만에 전문 주간보고서 작성' },
+    resume: { name: '이력서 빌더', desc: '3가지 스타일로 즉시 생성' },
+    'name-gen': { name: '이름 생성기', desc: '아기/브랜드/회사 이름 추천' },
+    moments: { name: 'SNS 캡션', desc: '감성 캡션, 더 이상 고민 없이' },
+    email: { name: '이메일 어시스턴트', desc: '비즈니스 이메일을 빠르게 작성' },
+    'json-formatter': { name: 'JSON 포맷터', desc: '포맷, 압축, 검증을 한 곳에서' },
+    base64: { name: 'Base64 인코더', desc: '유니코드 지원 Base64 변환' },
+    timestamp: { name: '타임스탬프 변환', desc: 'Unix 타임스탬프와 날짜 변환' },
+    regex: { name: '정규식 테스터', desc: '실시간 매칭 및 하이라이트' },
+    'url-encode': { name: 'URL 인코더', desc: 'URL 인코딩/디코딩 도구' },
+    'color-converter': { name: '색상 변환기', desc: 'HEX/RGB/HSL 즉시 변환' },
+    'word-count': { name: '글자수 세기', desc: '실시간 글자수/단어수 카운트' },
+    markdown: { name: 'Markdown 미리보기', desc: '좌우 분할 실시간 미리보기' },
+    'text-diff': { name: '텍스트 비교', desc: '줄별 비교 및 하이라이트' },
+    'password-gen': { name: '비밀번호 생성기', desc: '안전한 랜덤 비밀번호 생성' },
+  },
+  footer: { desc: '무료 온라인 도구 플랫폼. AI 기반 글쓰기, 개발자 도구, 텍스트 처리. 가입 불필요.', popular: '인기 도구', resources: '리소스', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 블로그' },
+  cta: { title: '매주 새로운 도구 추가 중', desc: '북마크하고 새로운 도구를 탐색하세요', btn: '모든 도구 보기' },
+  common: { hot: '🔥 인기', back: '← 도구 목록으로' },
+}
+
+const es: Translations = {
+  hero: { badge: '16+ herramientas gratuitas, actualizadas semanalmente', title: 'AI Tools', subtitle: 'Herramientas Online Gratis · Sin Registro · Uso Inmediato', desc: 'Herramientas de escritura con IA + utilidades para desarrolladores + procesamiento de texto — tu solución integral', cta: 'Comenzar', blog: '📚 Blog' },
+  stats: { tools: 'Herramientas', cost: 'Costo', register: 'Registro', available: 'Disponible' },
+  categories: { ai: { name: 'Escritura IA', desc: 'Deja que la IA maneje tu redacción' }, dev: { name: 'Herramientas Dev', desc: 'Utilidades esenciales para programadores' }, text: { name: 'Texto', desc: 'Procesamiento eficiente de texto' } },
+  tools: {
+    copywriter: { name: 'Copywriter IA', desc: 'Genera textos virales con un clic' },
+    'weekly-report': { name: 'Informe Semanal', desc: 'Informes profesionales en 5 minutos' },
+    resume: { name: 'Creador de CV', desc: '3 estilos, genera CVs profesionales al instante' },
+    'name-gen': { name: 'Generador de Nombres', desc: 'Nombres para bebés, marcas y empresas' },
+    moments: { name: 'Captions para Redes', desc: 'Captions premium, nunca te quedes sin palabras' },
+    email: { name: 'Asistente de Email', desc: 'Emails profesionales en segundos' },
+    'json-formatter': { name: 'Formateador JSON', desc: 'Formatear, minificar y validar' },
+    base64: { name: 'Base64 Encoder', desc: 'Codificación Base64 con soporte Unicode' },
+    timestamp: { name: 'Conversor Timestamp', desc: 'Conversión Unix timestamp y fecha' },
+    regex: { name: 'Tester de Regex', desc: 'Coincidencias en tiempo real' },
+    'url-encode': { name: 'URL Encoder', desc: 'Herramienta de codificación URL' },
+    'color-converter': { name: 'Conversor de Color', desc: 'Conversión HEX/RGB/HSL instantánea' },
+    'word-count': { name: 'Contador de Palabras', desc: 'Conteo de caracteres en tiempo real' },
+    markdown: { name: 'Vista Markdown', desc: 'Vista previa en tiempo real' },
+    'text-diff': { name: 'Comparar Textos', desc: 'Comparación línea por línea' },
+    'password-gen': { name: 'Generador de Contraseñas', desc: 'Contraseñas seguras y aleatorias' },
+  },
+  footer: { desc: 'Plataforma de herramientas online gratuitas con escritura IA, herramientas de desarrollo y procesamiento de texto.', popular: 'Herramientas Populares', resources: 'Recursos', rights: '© 2026 AI Tools · Todos los derechos reservados', blog: '📚 Blog' },
+  cta: { title: 'Nuevas herramientas cada semana', desc: 'Guarda este sitio y vuelve a explorar nuevas herramientas', btn: 'Ver Todas las Herramientas' },
+  common: { hot: '🔥 Popular', back: '← Volver a Herramientas' },
+}
+
+const translations: Record<Locale, Translations> = { zh, en, ja, ko, es }
+
+export function getTranslations(locale: Locale): Translations {
+  return translations[locale] || translations.zh
+}
+
+export type { Translations }
