@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'json-formatter-guide', 'qrcode-generator-guide',
     'css-units-guide', 'uuid-guide',
     'cron-expression-guide', 'image-compress-guide',
+    'sql-formatting-guide', 'ip-geolocation-guide',
   ]
 
   const entries: MetadataRoute.Sitemap = []

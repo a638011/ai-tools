@@ -105,6 +105,20 @@ const posts = [
     date: '2026-02-25',
     tag: '实用技巧',
   },
+  {
+    slug: 'sql-formatting-guide',
+    title: 'SQL格式化最佳实践：写出可读性强的SQL语句',
+    desc: 'SQL代码规范、格式化技巧、命名约定，附在线格式化工具。',
+    date: '2026-02-25',
+    tag: '开发知识',
+  },
+  {
+    slug: 'ip-geolocation-guide',
+    title: '如何查询IP地址的地理位置？IP定位原理详解',
+    desc: 'IP地址定位原理、精度分析、隐私保护，教你查询任意IP的地理位置信息。',
+    date: '2026-02-25',
+    tag: '网络知识',
+  },
 ]
 
 export default function BlogPage() {
