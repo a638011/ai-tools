@@ -7,6 +7,8 @@ const tools = [
   { name: 'AI起名生成器', desc: '宝宝/品牌/公司智能起名', href: '/name-gen', icon: '✨', tag: 'NEW' },
   { name: 'AI朋友圈文案', desc: '一键生成高级感朋友圈文案', href: '/moments', icon: '💬', tag: 'NEW' },
   { name: 'AI邮件助手', desc: '快速生成商务/求职邮件', href: '/email', icon: '📧', tag: 'NEW' },
+  { name: '在线字数统计', desc: '实时统计字数、字符数、中英文', href: '/word-count', icon: '📝', tag: 'NEW' },
+  { name: 'JSON格式化', desc: 'JSON格式化、压缩、校验工具', href: '/json-formatter', icon: '🔧', tag: 'NEW' },
 ]
 
 export default function Home() {

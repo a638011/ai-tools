@@ -4,7 +4,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.ai-starlight.cc'
   const tools = ['', '/copywriter', '/weekly-report', '/resume', '/name-gen', '/moments', '/email', '/blog',
     '/blog/xiaohongshu-copywriting-tips', '/blog/baby-naming-guide-2026', '/blog/weekly-report-template',
-    '/blog/resume-writing-guide', '/blog/wechat-moments-copywriting', '/blog/business-email-writing']
+    '/blog/resume-writing-guide', '/blog/wechat-moments-copywriting', '/blog/business-email-writing',
+    '/word-count', '/json-formatter']
   return tools.map(path => ({
     url: `${base}${path}`,
     lastModified: new Date(),
