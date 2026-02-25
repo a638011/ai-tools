@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 const toolSlugs = {
   ai: ['copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email'],
-  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag'],
+  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html'],
   text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress'],
-  design: ['gradient', 'box-shadow'],
+  design: ['gradient', 'box-shadow', 'border-radius'],
 }
 const toolIcons: Record<string, string> = {
   copywriter: '✍️', 'weekly-report': '📊', resume: '📄', 'name-gen': '✨',
@@ -18,6 +18,7 @@ const toolIcons: Record<string, string> = {
   uuid: '🆔', 'number-base': '🔢', 'html-entity': '🏷️', 'string-case': '🔤', 'sql-formatter': '🗃️', 'cron-parser': '⏲️',
   'ip-lookup': '🌐', emoji: '😀', 'image-compress': '🗜️', 'text-case': '🔠',
   'jwt-decoder': '🔐', 'json-csv': '📊', gradient: '🎨', 'box-shadow': '🔲', 'meta-tag': '🏷️',
+  'border-radius': '⬜', 'md-to-html': '📝',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
 const catConfig = [
