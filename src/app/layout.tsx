@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Tools - 免费AI工具集',
     description: '一站式免费AI工具平台，文案生成、简历制作、智能起名、邮件助手等16大工具，无需注册即用即走。',
-    url: 'https://www.ai-starlight.cc',
+    url: 'https://www.cyunyun.com',
     siteName: 'AI Tools',
     type: 'website',
     locale: 'zh_CN',
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: 'https://www.ai-starlight.cc' },
+  alternates: { canonical: 'https://www.cyunyun.com' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

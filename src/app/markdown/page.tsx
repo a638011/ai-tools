@@ -54,7 +54,7 @@ const sample = `# Markdown预览器
 
 ---
 
-[访问AI Tools](https://www.ai-starlight.cc)
+[访问AI Tools](https://www.cyunyun.com)
 
 开始编辑左侧内容，右侧实时预览！`
 
