@@ -5,8 +5,8 @@ import Link from 'next/link'
 const toolSlugs = {
   ai: ['copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email'],
   dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html'],
-  text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress'],
-  design: ['gradient', 'box-shadow', 'border-radius'],
+  text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress', 'tts'],
+  design: ['gradient', 'box-shadow', 'border-radius', 'flexbox', 'favicon'],
   pdf: ['pdf-merge', 'pdf-compress', 'image-to-pdf'],
 }
 const toolIcons: Record<string, string> = {
@@ -19,7 +19,7 @@ const toolIcons: Record<string, string> = {
   uuid: '🆔', 'number-base': '🔢', 'html-entity': '🏷️', 'string-case': '🔤', 'sql-formatter': '🗃️', 'cron-parser': '⏲️',
   'ip-lookup': '🌐', emoji: '😀', 'image-compress': '🗜️', 'text-case': '🔠',
   'jwt-decoder': '🔐', 'json-csv': '📊', gradient: '🎨', 'box-shadow': '🔲', 'meta-tag': '🏷️',
-  'border-radius': '⬜', 'md-to-html': '📝',
+  'border-radius': '⬜', 'md-to-html': '📝', flexbox: '📦', tts: '🔊', favicon: '🎨',
   'pdf-merge': '🔗', 'pdf-compress': '🗜️', 'image-to-pdf': '🖼️',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
