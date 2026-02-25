@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'developer-tools-2026', 'password-security-guide',
     'json-formatter-guide', 'qrcode-generator-guide',
     'css-units-guide', 'uuid-guide',
+    'cron-expression-guide', 'image-compress-guide',
   ]
 
   const entries: MetadataRoute.Sitemap = []

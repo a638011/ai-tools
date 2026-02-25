@@ -91,6 +91,20 @@ const posts = [
     date: '2026-02-25',
     tag: '开发知识',
   },
+  {
+    slug: 'cron-expression-guide',
+    title: 'Cron表达式详解：Linux定时任务完全指南',
+    desc: '详解Cron表达式语法、常用示例，从入门到精通Linux定时任务配置。',
+    date: '2026-02-25',
+    tag: '运维技能',
+  },
+  {
+    slug: 'image-compress-guide',
+    title: '如何压缩图片不损失画质？图片压缩完全指南',
+    desc: '图片压缩原理、格式对比、最佳实践，在保持画质的前提下大幅减小图片体积。',
+    date: '2026-02-25',
+    tag: '实用技巧',
+  },
 ]
 
 export default function BlogPage() {
