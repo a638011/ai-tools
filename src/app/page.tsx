@@ -36,6 +36,7 @@ export default function Home() {
         ))}
       </div>
       <footer className="text-center mt-16 text-sm text-gray-400">
+        <Link href="/blog" className="text-blue-500 hover:underline mr-4">📚 博客</Link>
         © 2026 AI Tools · Powered by AI
       </footer>
     </main>
