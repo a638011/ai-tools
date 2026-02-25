@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 const toolSlugs = {
   ai: ['copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email'],
-  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode'],
-  text: ['word-count', 'markdown', 'text-diff', 'password-gen'],
+  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units'],
+  text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem'],
 }
 const toolIcons: Record<string, string> = {
   copywriter: '✍️', 'weekly-report': '📊', resume: '📄', 'name-gen': '✨',
@@ -13,6 +13,7 @@ const toolIcons: Record<string, string> = {
   timestamp: '⏰', regex: '🔍', 'url-encode': '🔗', 'color-converter': '🎨',
   'word-count': '📝', markdown: '📄', 'text-diff': '📋', 'password-gen': '🔑',
   'image-base64': '🖼️', hash: '🔒', qrcode: '📱',
+  lorem: '📜', 'css-units': '📐',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
 const catConfig = [

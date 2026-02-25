@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email',
     'json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter',
     'word-count', 'markdown', 'text-diff', 'password-gen',
-    'image-base64', 'hash', 'qrcode',
+    'image-base64', 'hash', 'qrcode', 'lorem', 'css-units',
   ]
 
   const blogs = [
