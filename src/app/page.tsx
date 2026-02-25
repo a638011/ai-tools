@@ -9,6 +9,8 @@ const tools = [
   { name: 'AI邮件助手', desc: '快速生成商务/求职邮件', href: '/email', icon: '📧', tag: 'NEW' },
   { name: '在线字数统计', desc: '实时统计字数、字符数、中英文', href: '/word-count', icon: '📝', tag: 'NEW' },
   { name: 'JSON格式化', desc: 'JSON格式化、压缩、校验工具', href: '/json-formatter', icon: '🔧', tag: 'NEW' },
+  { name: 'Base64编解码', desc: '在线Base64编码/解码，支持中文', href: '/base64', icon: '🔐', tag: 'NEW' },
+  { name: '时间戳转换', desc: 'Unix时间戳与日期互转', href: '/timestamp', icon: '⏰', tag: 'NEW' },
 ]
 
 export default function Home() {
