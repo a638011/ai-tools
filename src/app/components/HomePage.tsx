@@ -4,8 +4,9 @@ import Link from 'next/link'
 
 const toolSlugs = {
   ai: ['copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email'],
-  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser'],
+  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag'],
   text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress'],
+  design: ['gradient', 'box-shadow'],
 }
 const toolIcons: Record<string, string> = {
   copywriter: '✍️', 'weekly-report': '📊', resume: '📄', 'name-gen': '✨',
@@ -16,12 +17,14 @@ const toolIcons: Record<string, string> = {
   lorem: '📜', 'css-units': '📐',
   uuid: '🆔', 'number-base': '🔢', 'html-entity': '🏷️', 'string-case': '🔤', 'sql-formatter': '🗃️', 'cron-parser': '⏲️',
   'ip-lookup': '🌐', emoji: '😀', 'image-compress': '🗜️', 'text-case': '🔠',
+  'jwt-decoder': '🔐', 'json-csv': '📊', gradient: '🎨', 'box-shadow': '🔲', 'meta-tag': '🏷️',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
 const catConfig = [
   { key: 'ai' as const, icon: '✍️', gradient: 'from-violet-500 to-purple-600' },
   { key: 'dev' as const, icon: '🛠️', gradient: 'from-blue-500 to-cyan-500' },
   { key: 'text' as const, icon: '📝', gradient: 'from-emerald-500 to-teal-500' },
+  { key: 'design' as const, icon: '🎨', gradient: 'from-pink-500 to-rose-500' },
 ]
 
 export default function HomePage() {

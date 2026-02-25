@@ -3,7 +3,7 @@ import { Locale } from './config'
 type Translations = {
   hero: { badge: string; title: string; subtitle: string; desc: string; cta: string; blog: string }
   stats: { tools: string; cost: string; register: string; available: string }
-  categories: { ai: { name: string; desc: string }; dev: { name: string; desc: string }; text: { name: string; desc: string } }
+  categories: { ai: { name: string; desc: string }; dev: { name: string; desc: string }; text: { name: string; desc: string }; design: { name: string; desc: string } }
   tools: Record<string, { name: string; desc: string }>
   footer: { desc: string; popular: string; resources: string; rights: string; blog: string }
   cta: { title: string; desc: string; btn: string }
@@ -13,7 +13,7 @@ type Translations = {
 const zh: Translations = {
   hero: { badge: '已上线 16+ 个免费工具，持续更新中', title: 'AI Tools', subtitle: '免费在线工具集 · 无需注册 · 即用即走', desc: 'AI驱动的智能写作工具 + 程序员必备开发工具 + 实用文本处理，一站式解决你的效率需求', cta: '开始使用', blog: '📚 阅读博客' },
   stats: { tools: '在线工具', cost: '使用费用', register: '需要注册', available: '随时可用' },
-  categories: { ai: { name: 'AI 智能写作', desc: '让AI帮你搞定各种文案和文书' }, dev: { name: '开发者工具箱', desc: '程序员日常必备效率工具' }, text: { name: '文本处理', desc: '高效处理各种文本需求' } },
+  categories: { ai: { name: 'AI 智能写作', desc: '让AI帮你搞定各种文案和文书' }, dev: { name: '开发者工具箱', desc: '程序员日常必备效率工具' }, text: { name: '文本处理', desc: '高效处理各种文本需求' }, design: { name: '设计工具', desc: 'CSS可视化生成器' } },
   tools: {
     copywriter: { name: 'AI文案生成器', desc: '小红书/淘宝/抖音爆款文案一键生成' },
     'weekly-report': { name: 'AI周报生成器', desc: '5分钟搞定专业周报' },
@@ -46,6 +46,11 @@ const zh: Translations = {
     emoji: { name: 'Emoji搜索', desc: '搜索并一键复制Emoji表情' },
     'image-compress': { name: '图片压缩', desc: '在线压缩图片，调节质量' },
     'text-case': { name: '大小写转换', desc: '大写/小写/首字母大写一键转换' },
+    'jwt-decoder': { name: 'JWT解码器', desc: '在线解析JWT Token内容' },
+    'json-csv': { name: 'JSON↔CSV转换', desc: 'JSON数组与CSV表格互转' },
+    gradient: { name: 'CSS渐变生成器', desc: '可视化生成CSS渐变代码' },
+    'box-shadow': { name: 'Box Shadow生成器', desc: '可视化生成CSS阴影效果' },
+    'meta-tag': { name: 'Meta标签生成器', desc: '生成SEO友好的HTML meta标签' },
   },
   footer: { desc: '免费在线工具平台，AI驱动的智能写作 + 开发者工具 + 文本处理，无需注册即用即走。', popular: '热门工具', resources: '资源', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 博客' },
   cta: { title: '更多工具持续上线中', desc: '我们每周都在开发新工具，收藏本站，随时回来探索', btn: '浏览全部工具' },
@@ -55,7 +60,7 @@ const zh: Translations = {
 const en: Translations = {
   hero: { badge: '16+ free tools online, updated weekly', title: 'AI Tools', subtitle: 'Free Online Toolkit · No Sign-up · Use Instantly', desc: 'AI-powered writing tools + developer utilities + text processing — your one-stop productivity solution', cta: 'Get Started', blog: '📚 Read Blog' },
   stats: { tools: 'Online Tools', cost: 'Usage Fee', register: 'Sign-up Required', available: 'Available' },
-  categories: { ai: { name: 'AI Writing', desc: 'Let AI handle your copywriting and documents' }, dev: { name: 'Developer Tools', desc: 'Essential daily tools for programmers' }, text: { name: 'Text Processing', desc: 'Efficiently handle all text needs' } },
+  categories: { ai: { name: 'AI Writing', desc: 'Let AI handle your copywriting and documents' }, dev: { name: 'Developer Tools', desc: 'Essential daily tools for programmers' }, text: { name: 'Text Processing', desc: 'Efficiently handle all text needs' }, design: { name: 'Design Tools', desc: 'Visual CSS generators' } },
   tools: {
     copywriter: { name: 'AI Copywriter', desc: 'Generate viral social media copy in one click' },
     'weekly-report': { name: 'Weekly Report Generator', desc: 'Professional weekly reports in 5 minutes' },
@@ -88,6 +93,11 @@ const en: Translations = {
     emoji: { name: 'Emoji Search', desc: 'Search and copy emojis' },
     'image-compress': { name: 'Image Compressor', desc: 'Compress images online' },
     'text-case': { name: 'Text Case Converter', desc: 'UPPER/lower/Title case converter' },
+    'jwt-decoder': { name: 'JWT Decoder', desc: 'Decode and inspect JWT tokens' },
+    'json-csv': { name: 'JSON↔CSV Converter', desc: 'Convert between JSON and CSV' },
+    gradient: { name: 'CSS Gradient Generator', desc: 'Generate CSS gradients visually' },
+    'box-shadow': { name: 'Box Shadow Generator', desc: 'Generate CSS box-shadow visually' },
+    'meta-tag': { name: 'Meta Tag Generator', desc: 'Generate SEO-friendly meta tags' },
   },
   footer: { desc: 'Free online tool platform with AI-powered writing, developer tools, and text processing. No sign-up required.', popular: 'Popular Tools', resources: 'Resources', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 Blog' },
   cta: { title: 'More tools coming every week', desc: 'Bookmark this site and come back to explore new tools', btn: 'Browse All Tools' },
@@ -97,7 +107,7 @@ const en: Translations = {
 const ja: Translations = {
   hero: { badge: '16以上の無料ツールを公開中、毎週更新', title: 'AI Tools', subtitle: '無料オンラインツール · 登録不要 · すぐ使える', desc: 'AI搭載のライティングツール + 開発者ツール + テキスト処理 — 生産性を一括解決', cta: '使ってみる', blog: '📚 ブログ' },
   stats: { tools: 'ツール数', cost: '利用料金', register: '登録必要', available: 'いつでも利用可' },
-  categories: { ai: { name: 'AIライティング', desc: 'AIがコピーライティングをサポート' }, dev: { name: '開発者ツール', desc: 'プログラマー必須の効率ツール' }, text: { name: 'テキスト処理', desc: 'テキスト処理を効率的に' } },
+  categories: { ai: { name: 'AIライティング', desc: 'AIがコピーライティングをサポート' }, dev: { name: '開発者ツール', desc: 'プログラマー必須の効率ツール' }, text: { name: 'テキスト処理', desc: 'テキスト処理を効率的に' }, design: { name: 'デザインツール', desc: 'CSS視覚ジェネレーター' } },
   tools: {
     copywriter: { name: 'AIコピーライター', desc: 'SNS向けバズるコピーをワンクリック生成' },
     'weekly-report': { name: '週報ジェネレーター', desc: '5分でプロの週報を作成' },
@@ -130,6 +140,11 @@ const ja: Translations = {
     emoji: { name: 'Emoji検索', desc: 'Emojiを検索してコピー' },
     'image-compress': { name: '画像圧縮', desc: 'オンラインで画像を圧縮' },
     'text-case': { name: '大小文字変換', desc: '大文字/小文字を一括変換' },
+    'jwt-decoder': { name: 'JWTデコーダー', desc: 'JWTトークンを解析' },
+    'json-csv': { name: 'JSON↔CSV変換', desc: 'JSONとCSVの相互変換' },
+    gradient: { name: 'CSSグラデーション', desc: 'CSSグラデーションを生成' },
+    'box-shadow': { name: 'Box Shadow生成', desc: 'CSSボックスシャドウを生成' },
+    'meta-tag': { name: 'Metaタグ生成', desc: 'SEO用メタタグを生成' },
   },
   footer: { desc: '無料オンラインツールプラットフォーム。AI搭載ライティング、開発者ツール、テキスト処理。登録不要。', popular: '人気ツール', resources: 'リソース', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 ブログ' },
   cta: { title: '毎週新しいツールを追加中', desc: 'ブックマークして、新しいツールを探しに来てください', btn: 'すべてのツールを見る' },
@@ -139,7 +154,7 @@ const ja: Translations = {
 const ko: Translations = {
   hero: { badge: '16개 이상의 무료 도구 제공, 매주 업데이트', title: 'AI Tools', subtitle: '무료 온라인 도구 · 가입 불필요 · 바로 사용', desc: 'AI 기반 글쓰기 도구 + 개발자 도구 + 텍스트 처리 — 올인원 생산성 솔루션', cta: '시작하기', blog: '📚 블로그' },
   stats: { tools: '온라인 도구', cost: '이용 요금', register: '가입 필요', available: '항상 이용 가능' },
-  categories: { ai: { name: 'AI 글쓰기', desc: 'AI가 카피라이팅을 도와드립니다' }, dev: { name: '개발자 도구', desc: '프로그래머 필수 효율 도구' }, text: { name: '텍스트 처리', desc: '텍스트 처리를 효율적으로' } },
+  categories: { ai: { name: 'AI 글쓰기', desc: 'AI가 카피라이팅을 도와드립니다' }, dev: { name: '개발자 도구', desc: '프로그래머 필수 효율 도구' }, text: { name: '텍스트 처리', desc: '텍스트 처리를 효율적으로' }, design: { name: '디자인 도구', desc: 'CSS 시각적 생성기' } },
   tools: {
     copywriter: { name: 'AI 카피라이터', desc: '바이럴 SNS 카피를 원클릭 생성' },
     'weekly-report': { name: '주간보고서 생성기', desc: '5분 만에 전문 주간보고서 작성' },
@@ -172,6 +187,11 @@ const ko: Translations = {
     emoji: { name: 'Emoji 검색', desc: 'Emoji 검색 및 복사' },
     'image-compress': { name: '이미지 압축', desc: '온라인 이미지 압축' },
     'text-case': { name: '대소문자 변환', desc: '대문자/소문자 일괄 변환' },
+    'jwt-decoder': { name: 'JWT 디코더', desc: 'JWT 토큰 분석' },
+    'json-csv': { name: 'JSON↔CSV 변환', desc: 'JSON과 CSV 상호 변환' },
+    gradient: { name: 'CSS 그라디언트', desc: 'CSS 그라디언트 생성' },
+    'box-shadow': { name: 'Box Shadow 생성기', desc: 'CSS 박스 그림자 생성' },
+    'meta-tag': { name: 'Meta 태그 생성기', desc: 'SEO 메타 태그 생성' },
   },
   footer: { desc: '무료 온라인 도구 플랫폼. AI 기반 글쓰기, 개발자 도구, 텍스트 처리. 가입 불필요.', popular: '인기 도구', resources: '리소스', rights: '© 2026 AI Tools · All rights reserved', blog: '📚 블로그' },
   cta: { title: '매주 새로운 도구 추가 중', desc: '북마크하고 새로운 도구를 탐색하세요', btn: '모든 도구 보기' },
@@ -181,7 +201,7 @@ const ko: Translations = {
 const es: Translations = {
   hero: { badge: '16+ herramientas gratuitas, actualizadas semanalmente', title: 'AI Tools', subtitle: 'Herramientas Online Gratis · Sin Registro · Uso Inmediato', desc: 'Herramientas de escritura con IA + utilidades para desarrolladores + procesamiento de texto — tu solución integral', cta: 'Comenzar', blog: '📚 Blog' },
   stats: { tools: 'Herramientas', cost: 'Costo', register: 'Registro', available: 'Disponible' },
-  categories: { ai: { name: 'Escritura IA', desc: 'Deja que la IA maneje tu redacción' }, dev: { name: 'Herramientas Dev', desc: 'Utilidades esenciales para programadores' }, text: { name: 'Texto', desc: 'Procesamiento eficiente de texto' } },
+  categories: { ai: { name: 'Escritura IA', desc: 'Deja que la IA maneje tu redacción' }, dev: { name: 'Herramientas Dev', desc: 'Utilidades esenciales para programadores' }, text: { name: 'Texto', desc: 'Procesamiento eficiente de texto' }, design: { name: 'Diseño', desc: 'Generadores CSS visuales' } },
   tools: {
     copywriter: { name: 'Copywriter IA', desc: 'Genera textos virales con un clic' },
     'weekly-report': { name: 'Informe Semanal', desc: 'Informes profesionales en 5 minutos' },
@@ -214,6 +234,11 @@ const es: Translations = {
     emoji: { name: 'Buscar Emoji', desc: 'Buscar y copiar emojis' },
     'image-compress': { name: 'Compresor de Imágenes', desc: 'Comprimir imágenes en línea' },
     'text-case': { name: 'Conversor Mayúsculas', desc: 'MAYÚSCULAS/minúsculas' },
+    'jwt-decoder': { name: 'Decodificador JWT', desc: 'Decodificar tokens JWT' },
+    'json-csv': { name: 'JSON↔CSV', desc: 'Convertir entre JSON y CSV' },
+    gradient: { name: 'Generador Gradiente', desc: 'Generar gradientes CSS' },
+    'box-shadow': { name: 'Generador Box Shadow', desc: 'Generar sombras CSS' },
+    'meta-tag': { name: 'Generador Meta Tags', desc: 'Generar meta tags SEO' },
   },
   footer: { desc: 'Plataforma de herramientas online gratuitas con escritura IA, herramientas de desarrollo y procesamiento de texto.', popular: 'Herramientas Populares', resources: 'Recursos', rights: '© 2026 AI Tools · Todos los derechos reservados', blog: '📚 Blog' },
   cta: { title: 'Nuevas herramientas cada semana', desc: 'Guarda este sitio y vuelve a explorar nuevas herramientas', btn: 'Ver Todas las Herramientas' },

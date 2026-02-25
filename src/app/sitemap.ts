@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'image-base64', 'hash', 'qrcode', 'lorem', 'css-units',
     'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter',
     'cron-parser', 'ip-lookup', 'emoji', 'image-compress', 'text-case',
+    'jwt-decoder', 'json-csv', 'gradient', 'box-shadow', 'meta-tag',
   ]
 
   const blogs = [

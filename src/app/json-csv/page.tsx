@@ -1,0 +1,81 @@
+'use client'
+import { useState } from 'react'
+import { useLocale, LangSwitcher } from '../components/LocaleProvider'
+import { getToolUI } from '@/i18n/toolUI'
+import Link from 'next/link'
+
+export default function JsonCsvPage() {
+  const { locale, t } = useLocale()
+  const ui = getToolUI(locale)
+  const [input, setInput] = useState('')
+  const [output, setOutput] = useState('')
+  const [error, setError] = useState('')
+
+  const jsonToCsv = () => {
+    setError('')
+    try {
+      const data = JSON.parse(input)
+      const arr = Array.isArray(data) ? data : [data]
+      if (arr.length === 0) { setOutput(''); return }
+      const headers = Array.from(new Set(arr.flatMap(obj => Object.keys(obj))))
+      const rows = arr.map(obj => headers.map(h => {
+        const v = obj[h]
+        const s = v === null || v === undefined ? '' : String(v)
+        return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s.replace(/"/g, '""')}"` : s
+      }).join(','))
+      setOutput([headers.join(','), ...rows].join('\n'))
+    } catch (e) { setError(locale === 'zh' ? '无效的JSON格式' : 'Invalid JSON') }
+  }
+
+  const csvToJson = () => {
+    setError('')
+    try {
+      const lines = input.trim().split('\n').filter(l => l.trim())
+      if (lines.length < 2) { setError(locale === 'zh' ? '至少需要表头和一行数据' : 'Need header + at least 1 row'); return }
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''))
+      const result = lines.slice(1).map(line => {
+        const vals = line.split(',').map(v => v.trim().replace(/^"|"$/g, ''))
+        const obj: Record<string, string> = {}
+        headers.forEach((h, i) => { obj[h] = vals[i] || '' })
+        return obj
+      })
+      setOutput(JSON.stringify(result, null, 2))
+    } catch { setError(locale === 'zh' ? '无效的CSV格式' : 'Invalid CSV') }
+  }
+
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-8">
+      <div className="flex justify-between items-center mb-6">
+        <Link href="/" className="text-sm text-blue-500 hover:underline">{t.common.back}</Link>
+        <LangSwitcher />
+      </div>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">📊 JSON ↔ CSV {locale === 'zh' ? '转换器' : locale === 'ja' ? 'コンバーター' : locale === 'ko' ? '변환기' : locale === 'es' ? 'Conversor' : 'Converter'}</h1>
+      <p className="text-gray-500 mb-8">{locale === 'zh' ? 'JSON数组与CSV表格数据互转' : 'Convert between JSON arrays and CSV data'}</p>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-sm font-medium text-gray-700">Input</span>
+            <button onClick={() => { setInput(''); setOutput(''); setError('') }} className="text-xs text-gray-400 hover:text-gray-600">{ui.clear}</button>
+          </div>
+          <textarea value={input} onChange={e => setInput(e.target.value)} rows={14}
+            placeholder={locale === 'zh' ? '粘贴JSON数组或CSV数据...' : 'Paste JSON array or CSV data...'}
+            className="w-full px-3 py-2 border border-gray-200 rounded-lg font-mono text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500 resize-none" />
+        </div>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-sm font-medium text-gray-700">{ui.result}</span>
+            {output && <button onClick={() => navigator.clipboard.writeText(output)} className="text-xs text-blue-500 hover:underline">{ui.copy}</button>}
+          </div>
+          <textarea value={output} readOnly rows={14}
+            className="w-full px-3 py-2 border border-gray-200 rounded-lg bg-gray-50 font-mono text-sm text-gray-700 resize-none" />
+        </div>
+      </div>
+      {error && <div className="mt-3 bg-red-50 text-red-600 rounded-xl p-3 text-sm">❌ {error}</div>}
+      <div className="flex gap-3 mt-4">
+        <button onClick={jsonToCsv} disabled={!input.trim()} className="flex-1 py-3 bg-blue-500 text-white rounded-xl font-medium hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition">JSON → CSV</button>
+        <button onClick={csvToJson} disabled={!input.trim()} className="flex-1 py-3 bg-gray-700 text-white rounded-xl font-medium hover:bg-gray-800 disabled:bg-gray-300 disabled:cursor-not-allowed transition">CSV → JSON</button>
+      </div>
+    </main>
+  )
+}
