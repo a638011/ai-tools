@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/xiaohongshu-copywriting-tips', '/blog/baby-naming-guide-2026', '/blog/weekly-report-template',
     '/blog/resume-writing-guide', '/blog/wechat-moments-copywriting', '/blog/business-email-writing',
     '/word-count', '/json-formatter', '/base64', '/timestamp', '/password-gen', '/color-converter',
-    '/markdown', '/regex']
+    '/markdown', '/regex', '/url-encode', '/text-diff']
   return tools.map(path => ({
     url: `${base}${path}`,
     lastModified: new Date(),

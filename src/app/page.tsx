@@ -15,6 +15,8 @@ const tools = [
   { name: '颜色转换器', desc: 'HEX/RGB/HSL颜色互转', href: '/color-converter', icon: '🎨', tag: 'NEW' },
   { name: 'Markdown预览', desc: '实时编辑预览Markdown', href: '/markdown', icon: '📝', tag: 'NEW' },
   { name: '正则表达式测试', desc: '在线测试正则，实时匹配高亮', href: '/regex', icon: '🔍', tag: 'NEW' },
+  { name: 'URL编解码', desc: '在线URL编码/解码', href: '/url-encode', icon: '🔗', tag: 'NEW' },
+  { name: '文本对比', desc: '对比两段文本的差异', href: '/text-diff', icon: '📋', tag: 'NEW' },
 ]
 
 export default function Home() {
