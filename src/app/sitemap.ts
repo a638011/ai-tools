@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'resume-writing-guide', 'wechat-moments-copywriting', 'business-email-writing',
     'developer-tools-2026', 'password-security-guide',
     'json-formatter-guide', 'qrcode-generator-guide',
+    'css-units-guide', 'uuid-guide',
   ]
 
   const entries: MetadataRoute.Sitemap = []

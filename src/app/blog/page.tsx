@@ -77,6 +77,20 @@ const posts = [
     date: '2026-02-25',
     tag: '实用工具',
   },
+  {
+    slug: 'css-units-guide',
+    title: 'CSS中px、rem、em、vw有什么区别？前端单位完全指南',
+    desc: '详解CSS各种单位的区别和使用场景，附在线转换工具，前端开发必读。',
+    date: '2026-02-25',
+    tag: '前端开发',
+  },
+  {
+    slug: 'uuid-guide',
+    title: '什么是UUID？UUID v4生成原理与使用场景',
+    desc: '详解UUID的概念、版本区别、v4生成原理，以及在数据库和分布式系统中的应用。',
+    date: '2026-02-25',
+    tag: '开发知识',
+  },
 ]
 
 export default function BlogPage() {
