@@ -119,6 +119,20 @@ const posts = [
     date: '2026-02-25',
     tag: '网络知识',
   },
+  {
+    slug: 'regex-tutorial',
+    title: '正则表达式入门教程：从零开始学Regex',
+    desc: '正则表达式基础语法、常用模式、实战示例，手把手教你掌握正则表达式。',
+    date: '2026-02-25',
+    tag: '开发技能',
+  },
+  {
+    slug: 'base64-encoding-guide',
+    title: 'Base64编码是什么？原理、用途与在线工具',
+    desc: '详解Base64编码原理、为什么需要Base64、常见使用场景。',
+    date: '2026-02-25',
+    tag: '开发知识',
+  },
 ]
 
 export default function BlogPage() {
