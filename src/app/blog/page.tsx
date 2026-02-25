@@ -161,6 +161,20 @@ const posts = [
     date: '2026-02-26',
     tag: '前端开发',
   },
+  {
+    slug: 'pdf-tools-guide',
+    title: 'PDF文件处理完全指南：合并、压缩、转换一站搞定',
+    desc: '详解PDF常见处理需求和解决方案，附免费在线工具。',
+    date: '2026-02-26',
+    tag: '实用工具',
+  },
+  {
+    slug: 'css-box-shadow-guide',
+    title: 'CSS Box Shadow完全指南：从基础到高级阴影效果',
+    desc: '详解box-shadow语法、参数、多层阴影、常用效果，附可视化生成器。',
+    date: '2026-02-26',
+    tag: '前端开发',
+  },
 ]
 
 export default function BlogPage() {
