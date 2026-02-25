@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { LocaleProvider } from './components/LocaleProvider'
 
 export const metadata: Metadata = {
   title: 'AI Tools - 免费AI工具集 | 文案生成、简历制作、起名助手',
@@ -20,7 +21,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN">
-      <body className="bg-gray-50 min-h-screen antialiased">{children}</body>
+      <body className="bg-gray-50 min-h-screen antialiased">
+        <LocaleProvider>{children}</LocaleProvider>
+      </body>
     </html>
   )
 }

@@ -1,5 +1,5 @@
-import { locales, Locale, localeNames, localeFlags } from '@/i18n/config'
-import { getTranslations } from '@/i18n/translations'
+'use client'
+import { useLocale, LangSwitcher } from './LocaleProvider'
 import Link from 'next/link'
 
 const toolSlugs = {
@@ -20,21 +20,15 @@ const catConfig = [
   { key: 'text' as const, icon: '📝', gradient: 'from-emerald-500 to-teal-500' },
 ]
 
-export default function HomePage({ locale = 'zh' }: { locale?: Locale }) {
-  const t = getTranslations(locale)
+export default function HomePage() {
+  const { t } = useLocale()
   const totalTools = Object.keys(t.tools).length
-  const prefix = locale === 'zh' ? '' : `/${locale}`
 
   return (
     <div className="min-h-screen">
       {/* Lang Switcher */}
-      <div className="absolute top-4 right-4 z-20 flex gap-1">
-        {locales.map(l => (
-          <Link key={l} href={l === 'zh' ? '/' : `/${l}`}
-            className={`px-2 py-1 rounded-lg text-xs transition ${l === locale ? 'bg-white/20 text-white font-medium' : 'text-white/60 hover:text-white/90'}`}>
-            {localeFlags[l]} {localeNames[l]}
-          </Link>
-        ))}
+      <div className="absolute top-4 right-4 z-20">
+        <LangSwitcher className="bg-white/10 backdrop-blur-sm rounded-xl p-1" />
       </div>
 
       {/* Hero */}

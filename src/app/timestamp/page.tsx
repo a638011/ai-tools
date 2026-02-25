@@ -1,4 +1,6 @@
 'use client'
+import { useLocale, LangSwitcher } from '../components/LocaleProvider'
+import { getToolUI } from '@/i18n/toolUI'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
@@ -37,7 +39,7 @@ export default function TimestampPage() {
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
-      <Link href="/" className="text-sm text-blue-500 hover:underline mb-6 inline-block">← 返回工具集</Link>
+      <div className="flex justify-between items-center mb-6"><Link href="/" className="text-sm text-blue-500 hover:underline">← Back</Link><LangSwitcher /></div>
       <h1 className="text-3xl font-bold text-gray-900 mb-2">⏰ 时间戳转换</h1>
       <p className="text-gray-500 mb-8">Unix时间戳与日期互转 · 免费使用</p>
 
