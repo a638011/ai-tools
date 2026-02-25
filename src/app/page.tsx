@@ -6,7 +6,7 @@ const tools = [
   { name: 'AI简历生成器', desc: '填写信息，一键生成专业简历', href: '/resume', icon: '📄', tag: 'NEW' },
   { name: 'AI起名生成器', desc: '宝宝/品牌/公司智能起名', href: '/name-gen', icon: '✨', tag: 'NEW' },
   { name: 'AI朋友圈文案', desc: '一键生成高级感朋友圈文案', href: '/moments', icon: '💬', tag: 'NEW' },
-  { name: 'AI邮件助手', desc: '快速生成商务/求职邮件', href: '/email', icon: '📧', tag: '即将上线' },
+  { name: 'AI邮件助手', desc: '快速生成商务/求职邮件', href: '/email', icon: '📧', tag: 'NEW' },
 ]
 
 export default function Home() {
