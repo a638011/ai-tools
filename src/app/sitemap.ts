@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogs = [
     'xiaohongshu-copywriting-tips', 'baby-naming-guide-2026', 'weekly-report-template',
     'resume-writing-guide', 'wechat-moments-copywriting', 'business-email-writing',
+    'developer-tools-2026', 'password-security-guide',
   ]
 
   const entries: MetadataRoute.Sitemap = []

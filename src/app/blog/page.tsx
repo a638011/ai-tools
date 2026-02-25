@@ -49,6 +49,20 @@ const posts = [
     date: '2026-02-25',
     tag: '职场技能',
   },
+  {
+    slug: 'developer-tools-2026',
+    title: '2026年程序员必备的10个在线开发工具',
+    desc: '精选10个免费在线开发者工具：JSON格式化、Base64编解码、正则表达式测试等，无需安装，打开即用。',
+    date: '2026-02-25',
+    tag: '开发工具',
+  },
+  {
+    slug: 'password-security-guide',
+    title: '如何生成安全的密码？2026密码安全指南',
+    desc: '密码安全完全指南：为什么你的密码不安全？如何生成强密码？密码管理最佳实践。',
+    date: '2026-02-25',
+    tag: '安全指南',
+  },
 ]
 
 export default function BlogPage() {
