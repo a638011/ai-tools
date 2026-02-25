@@ -54,3 +54,8 @@ body {
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+}

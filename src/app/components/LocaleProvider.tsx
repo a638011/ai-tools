@@ -39,7 +39,7 @@ export function LangSwitcher({ className = '' }: { className?: string }) {
       {locales.map(l => (
         <button key={l} onClick={() => setLocale(l)}
           className={`px-2 py-1 rounded-lg text-xs transition ${l === locale ? 'bg-indigo-100 text-indigo-700 font-medium' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}>
-          {localeFlags[l]} {localeNames[l]}
+          {localeFlags[l]} <span className="hidden sm:inline">{localeNames[l]}</span>
         </button>
       ))}
     </div>

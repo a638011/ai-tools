@@ -42,9 +42,9 @@ export default function HomePage() {
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             {t.hero.badge}
           </div>
-          <h1 className="text-5xl font-extrabold text-white mb-4 tracking-tight">{t.hero.title}</h1>
-          <p className="text-xl text-white/80 mb-2">{t.hero.subtitle}</p>
-          <p className="text-base text-white/60 max-w-xl mx-auto mb-10">{t.hero.desc}</p>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">{t.hero.title}</h1>
+          <p className="text-lg sm:text-xl text-white/80 mb-2">{t.hero.subtitle}</p>
+          <p className="text-sm sm:text-base text-white/60 max-w-xl mx-auto mb-10">{t.hero.desc}</p>
           <div className="flex justify-center gap-4">
             <a href="#tools" className="px-8 py-3 bg-white text-indigo-600 rounded-xl font-semibold hover:bg-gray-50 transition shadow-lg shadow-indigo-500/20">{t.hero.cta}</a>
             <Link href="/blog" className="px-8 py-3 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition backdrop-blur-sm border border-white/20">{t.hero.blog}</Link>
@@ -54,7 +54,7 @@ export default function HomePage() {
 
       {/* Stats */}
       <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-10">
-        <div className="glass rounded-2xl shadow-xl border border-white/20 p-6 grid grid-cols-4 gap-4">
+        <div className="glass rounded-2xl shadow-xl border border-white/20 p-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[{ v: `${totalTools}+`, l: t.stats.tools }, { v: '0', l: t.stats.cost }, { v: '0', l: t.stats.register }, { v: '24/7', l: t.stats.available }].map(s => (
             <div key={s.l} className="text-center">
               <div className="text-2xl font-bold gradient-text">{s.v}</div>
@@ -78,7 +78,7 @@ export default function HomePage() {
                   <p className="text-sm text-gray-400">{catT.desc}</p>
                 </div>
               </div>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {slugs.map(slug => {
                   const tool = t.tools[slug]
                   return (
