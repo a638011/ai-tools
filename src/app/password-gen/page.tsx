@@ -1,105 +1,74 @@
 'use client'
+import { useState } from 'react'
 import { useLocale, LangSwitcher } from '../components/LocaleProvider'
 import { getToolUI } from '@/i18n/toolUI'
-import { useState } from 'react'
 import Link from 'next/link'
 
 export default function PasswordGenPage() {
-  const [length, setLength] = useState(16)
+  const { locale, t } = useLocale()
+  const ui = getToolUI(locale)
+  const [len, setLen] = useState(16)
   const [upper, setUpper] = useState(true)
   const [lower, setLower] = useState(true)
-  const [numbers, setNumbers] = useState(true)
-  const [symbols, setSymbols] = useState(true)
-  const [passwords, setPasswords] = useState<string[]>([])
+  const [nums, setNums] = useState(true)
+  const [syms, setSyms] = useState(true)
+  const [pwd, setPwd] = useState('')
+
+  const labels = { zh: { length: '长度', uppercase: '大写字母', lowercase: '小写字母', numbers: '数字', symbols: '特殊符号', strength: '强度', weak: '弱', medium: '中', strong: '强' }, en: { length: 'Length', uppercase: 'Uppercase', lowercase: 'Lowercase', numbers: 'Numbers', symbols: 'Symbols', strength: 'Strength', weak: 'Weak', medium: 'Medium', strong: 'Strong' }, ja: { length: '長さ', uppercase: '大文字', lowercase: '小文字', numbers: '数字', symbols: '記号', strength: '強度', weak: '弱', medium: '中', strong: '強' }, ko: { length: '길이', uppercase: '대문자', lowercase: '소문자', numbers: '숫자', symbols: '특수문자', strength: '강도', weak: '약함', medium: '보통', strong: '강함' }, es: { length: 'Longitud', uppercase: 'Mayúsculas', lowercase: 'Minúsculas', numbers: 'Números', symbols: 'Símbolos', strength: 'Fuerza', weak: 'Débil', medium: 'Media', strong: 'Fuerte' } }
+  const l = labels[locale] || labels.zh
 
   const generate = () => {
     let chars = ''
     if (upper) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     if (lower) chars += 'abcdefghijklmnopqrstuvwxyz'
-    if (numbers) chars += '0123456789'
-    if (symbols) chars += '!@#$%^&*()_+-=[]{}|;:,.<>?'
-    if (!chars) chars = 'abcdefghijklmnopqrstuvwxyz'
-    const results: string[] = []
-    for (let i = 0; i < 5; i++) {
-      let pw = ''
-      const arr = new Uint32Array(length)
-      crypto.getRandomValues(arr)
-      for (let j = 0; j < length; j++) {
-        pw += chars[arr[j] % chars.length]
-      }
-      results.push(pw)
-    }
-    setPasswords(results)
+    if (nums) chars += '0123456789'
+    if (syms) chars += '!@#$%^&*()_+-=[]{}|;:,.<>?'
+    if (!chars) return
+    const arr = new Uint32Array(len)
+    crypto.getRandomValues(arr)
+    setPwd(Array.from(arr, v => chars[v % chars.length]).join(''))
   }
 
-  const getStrength = () => {
-    let pool = 0
-    if (upper) pool += 26
-    if (lower) pool += 26
-    if (numbers) pool += 10
-    if (symbols) pool += 26
-    const bits = Math.floor(length * Math.log2(pool || 26))
-    if (bits < 40) return { label: '弱', color: 'text-red-500', bg: 'bg-red-100' }
-    if (bits < 60) return { label: '中等', color: 'text-yellow-500', bg: 'bg-yellow-100' }
-    if (bits < 80) return { label: '强', color: 'text-green-500', bg: 'bg-green-100' }
-    return { label: '极强', color: 'text-green-700', bg: 'bg-green-200' }
+  const strength = () => {
+    let s = 0
+    if (upper) s++; if (lower) s++; if (nums) s++; if (syms) s++
+    if (len >= 16) s++
+    return s <= 2 ? { text: l.weak, color: 'text-red-500' } : s <= 3 ? { text: l.medium, color: 'text-yellow-500' } : { text: l.strong, color: 'text-green-500' }
   }
-
-  const strength = getStrength()
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
-      <div className="flex justify-between items-center mb-6"><Link href="/" className="text-sm text-blue-500 hover:underline">← Back</Link><LangSwitcher /></div>
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">🔑 密码生成器</h1>
-      <p className="text-gray-500 mb-8">生成安全随机密码 · 免费使用</p>
+      <div className="flex justify-between items-center mb-6">
+        <Link href="/" className="text-sm text-blue-500 hover:underline">{t.common.back}</Link>
+        <LangSwitcher />
+      </div>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">🔑 {t.tools['password-gen'].name}</h1>
+      <p className="text-gray-500 mb-8">{t.tools['password-gen'].desc}</p>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-5">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-4">
         <div>
-          <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-medium text-gray-700">密码长度：{length}</label>
-            <span className={`text-xs px-2 py-1 rounded-full font-medium ${strength.bg} ${strength.color}`}>
-              强度：{strength.label}
-            </span>
-          </div>
-          <input type="range" min={4} max={64} value={length} onChange={e => setLength(Number(e.target.value))}
-            className="w-full" />
+          <label className="text-sm font-medium text-gray-700">{l.length}: {len}</label>
+          <input type="range" min={4} max={64} value={len} onChange={e => setLen(+e.target.value)} className="w-full mt-1" />
         </div>
-
-        <div className="flex flex-wrap gap-3">
-          {[
-            { label: '大写字母 A-Z', checked: upper, set: setUpper },
-            { label: '小写字母 a-z', checked: lower, set: setLower },
-            { label: '数字 0-9', checked: numbers, set: setNumbers },
-            { label: '特殊符号 !@#$', checked: symbols, set: setSymbols },
-          ].map(opt => (
-            <label key={opt.label} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
-              <input type="checkbox" checked={opt.checked} onChange={e => opt.set(e.target.checked)}
-                className="rounded border-gray-300" />
-              {opt.label}
+        <div className="grid grid-cols-2 gap-3">
+          {[{ v: upper, s: setUpper, n: l.uppercase }, { v: lower, s: setLower, n: l.lowercase }, { v: nums, s: setNums, n: l.numbers }, { v: syms, s: setSyms, n: l.symbols }].map(o => (
+            <label key={o.n} className="flex items-center gap-2 text-sm text-gray-700">
+              <input type="checkbox" checked={o.v} onChange={e => o.s(e.target.checked)} className="rounded" />{o.n}
             </label>
           ))}
         </div>
-
-        <button onClick={generate}
-          className="w-full py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition">
-          🎲 生成密码
-        </button>
-      </div>
-
-      {passwords.length > 0 && (
-        <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h3 className="font-medium text-gray-900 mb-3">生成结果（点击复制）</h3>
-          <div className="space-y-2">
-            {passwords.map((pw, i) => (
-              <div key={i} onClick={() => navigator.clipboard.writeText(pw)}
-                className="p-3 bg-gray-50 rounded-lg font-mono text-sm cursor-pointer hover:bg-blue-50 transition flex justify-between items-center">
-                <span className="break-all">{pw}</span>
-                <span className="text-xs text-gray-400 ml-2 shrink-0">📋</span>
-              </div>
-            ))}
+        <p className="text-sm">{l.strength}: <span className={`font-medium ${strength().color}`}>{strength().text}</span></p>
+        <button onClick={generate} className="w-full py-3 bg-blue-500 text-white rounded-xl font-medium hover:bg-blue-600 transition">{ui.generate}</button>
+        {pwd && (
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-medium text-gray-700">{ui.result}</span>
+              <button onClick={() => navigator.clipboard.writeText(pwd)} className="text-xs text-blue-500 hover:underline">{ui.copy}</button>
+            </div>
+            <p className="font-mono text-lg break-all text-gray-800">{pwd}</p>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </main>
   )
 }
