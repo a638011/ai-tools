@@ -133,6 +133,20 @@ const posts = [
     date: '2026-02-25',
     tag: '开发知识',
   },
+  {
+    slug: 'hash-algorithm-guide',
+    title: 'Hash加密算法详解：MD5、SHA-1、SHA-256有什么区别？',
+    desc: '详解常见Hash算法的原理、区别、安全性对比，以及实际应用场景。',
+    date: '2026-02-25',
+    tag: '信息安全',
+  },
+  {
+    slug: 'jwt-token-guide',
+    title: 'JWT Token详解：原理、结构与安全实践',
+    desc: '详解JWT的工作原理、三段式结构、签名验证，以及安全最佳实践。',
+    date: '2026-02-25',
+    tag: '开发知识',
+  },
 ]
 
 export default function BlogPage() {
