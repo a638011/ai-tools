@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 const toolSlugs = {
   ai: ['copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email'],
-  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html', 'json-schema', 'html-preview', 'css-minifier', 'xml-formatter'],
+  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html', 'json-schema', 'html-preview', 'css-minifier', 'xml-formatter', 'js-minifier'],
   text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress', 'tts'],
-  design: ['gradient', 'box-shadow', 'border-radius', 'flexbox', 'favicon'],
+  design: ['gradient', 'box-shadow', 'border-radius', 'flexbox', 'favicon', 'svg-editor'],
   pdf: ['pdf-merge', 'pdf-compress', 'image-to-pdf'],
 }
 const toolIcons: Record<string, string> = {
@@ -21,6 +21,7 @@ const toolIcons: Record<string, string> = {
   'jwt-decoder': '🔐', 'json-csv': '📊', gradient: '🎨', 'box-shadow': '🔲', 'meta-tag': '🏷️',
   'border-radius': '⬜', 'md-to-html': '📝', flexbox: '📦', tts: '🔊', favicon: '🎨',
   'json-schema': '📋', 'html-preview': '🌐', 'css-minifier': '🗜️', 'xml-formatter': '📄',
+  'js-minifier': '⚡', 'svg-editor': '✏️',
   'pdf-merge': '🔗', 'pdf-compress': '🗜️', 'image-to-pdf': '🖼️',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
