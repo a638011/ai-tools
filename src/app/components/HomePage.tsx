@@ -4,10 +4,12 @@ import Link from 'next/link'
 
 const toolSlugs = {
   ai: ['copywriter', 'weekly-report', 'resume', 'name-gen', 'moments', 'email'],
-  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html', 'json-schema', 'html-preview', 'css-minifier', 'xml-formatter', 'js-minifier'],
-  text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress', 'tts'],
-  design: ['gradient', 'box-shadow', 'border-radius', 'flexbox', 'favicon', 'svg-editor'],
+  dev: ['json-formatter', 'base64', 'timestamp', 'regex', 'url-encode', 'color-converter', 'hash', 'image-base64', 'qrcode', 'css-units', 'uuid', 'number-base', 'html-entity', 'string-case', 'sql-formatter', 'cron-parser', 'jwt-decoder', 'json-csv', 'meta-tag', 'md-to-html', 'json-schema', 'html-preview', 'css-minifier', 'xml-formatter', 'js-minifier', 'yaml-formatter', 'json-to-yaml', 'http-status', 'chmod-calculator', 'csv-viewer', 'ascii-table', 'json-path', 'html-formatter', 'regex-gen', 'robots-txt', 'json-to-xml', 'toml-formatter', 'json-diff', 'user-agent-parser', 'open-graph'],
+  text: ['word-count', 'markdown', 'text-diff', 'password-gen', 'lorem', 'text-case', 'emoji', 'ip-lookup', 'image-compress', 'tts', 'text-reverse', 'text-sort', 'binary-text', 'morse-code', 'rot13', 'unicode-converter', 'text-replace', 'punycode', 'markdown-table', 'word-frequency'],
+  design: ['gradient', 'box-shadow', 'border-radius', 'flexbox', 'favicon', 'svg-editor', 'color-palette', 'font-preview', 'css-grid', 'css-animation', 'text-shadow-gen', 'placeholder-image', 'color-picker', 'image-resize', 'image-filter', 'image-watermark', 'aspect-ratio'],
   pdf: ['pdf-merge', 'pdf-compress', 'image-to-pdf'],
+  calc: ['percentage-calc', 'loan-calculator', 'bmi-calculator', 'date-calculator', 'age-calculator', 'tip-calculator', 'math-calculator', 'unit-converter'],
+  utility: ['countdown-timer', 'stopwatch', 'random-picker', 'screen-resolution', 'qr-reader', 'pomodoro'],
 }
 const toolIcons: Record<string, string> = {
   copywriter: '✍️', 'weekly-report': '📊', resume: '📄', 'name-gen': '✨',
@@ -23,6 +25,19 @@ const toolIcons: Record<string, string> = {
   'json-schema': '📋', 'html-preview': '🌐', 'css-minifier': '🗜️', 'xml-formatter': '📄',
   'js-minifier': '⚡', 'svg-editor': '✏️',
   'pdf-merge': '🔗', 'pdf-compress': '🗜️', 'image-to-pdf': '🖼️',
+  'yaml-formatter': '📄', 'json-to-yaml': '🔄', 'http-status': '📡', 'chmod-calculator': '🔐',
+  'csv-viewer': '📊', 'ascii-table': '📟', 'text-reverse': '🔃', 'text-sort': '📶',
+  'binary-text': '💻', 'morse-code': '📻', rot13: '🔏', 'unicode-converter': '🔣',
+  'color-palette': '🎨', 'font-preview': '🔤', 'css-grid': '📐', 'css-animation': '🎬',
+  'text-shadow-gen': '💫', 'placeholder-image': '🖼️', 'aspect-ratio': '📐', 'percentage-calc': '💯',
+  'loan-calculator': '🏦', 'bmi-calculator': '⚖️', 'date-calculator': '📅', 'age-calculator': '🎂',
+  'countdown-timer': '⏳', stopwatch: '⏱️', 'random-picker': '🎲', 'unit-converter': '📏',
+  'screen-resolution': '🖥️', 'user-agent-parser': '🔎', 'open-graph': '🔗', 'json-path': '🔍',
+  'html-formatter': '📄', 'regex-gen': '⚙️', 'robots-txt': '🤖', 'markdown-table': '📊',
+  'text-replace': '🔄', punycode: '🌍', 'image-resize': '📐', 'image-filter': '🎭',
+  'color-picker': '🎯', 'tip-calculator': '💰', 'json-diff': '🔀', 'json-to-xml': '🔄',
+  'toml-formatter': '📄', 'math-calculator': '🧮', 'word-frequency': '📈', 'qr-reader': '📷',
+  'image-watermark': '💧', pomodoro: '🍅',
 }
 const hotTools = ['copywriter', 'weekly-report', 'json-formatter']
 const catConfig = [
@@ -31,6 +46,8 @@ const catConfig = [
   { key: 'text' as const, icon: '📝', gradient: 'from-emerald-500 to-teal-500' },
   { key: 'design' as const, icon: '🎨', gradient: 'from-pink-500 to-rose-500' },
   { key: 'pdf' as const, icon: '📄', gradient: 'from-red-500 to-orange-500' },
+  { key: 'calc' as const, icon: '🧮', gradient: 'from-amber-500 to-yellow-500' },
+  { key: 'utility' as const, icon: '🔧', gradient: 'from-indigo-500 to-violet-500' },
 ]
 
 export default function HomePage() {
