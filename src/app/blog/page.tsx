@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'hash-generator-guide',
+    title: 'Hash生成器使用指南：在线生成 MD5、SHA-1、SHA-256、SHA-512',
+    desc: '从基础概念到实际场景，带你快速上手在线 Hash 生成器，搞懂 MD5、SHA-1、SHA-256、SHA-512 的区别。',
+    date: '2026-03-16',
+    tag: '开发工具',
+  },
+  {
     slug: 'xiaohongshu-copywriting-tips',
     title: '2026小红书爆款文案怎么写？5个模板直接套用',
     desc: '总结小红书爆款笔记的文案规律，提供5个可直接套用的模板，配合AI文案生成器一键搞定。',
