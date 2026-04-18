@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ai-copywriting-tips','ascii-code-table','aspect-ratio-explained',
     'baby-naming-guide-2026','base64-encoding-guide','binary-number-system',
     'bmi-health-guide','border-radius-tricks','business-email-writing',
-    'caesar-cipher-guide','color-picker-guide','color-theory-basics',
+    'caesar-cipher-guide','color-converter-guide','color-picker-guide','color-theory-basics',
     'cron-expression-guide','cron-parser-guide','css-animation-guide',
     'css-box-shadow-guide','css-color-formats','css-grid-tutorial',
     'css-minification-guide','css-units-guide','csv-data-processing',
